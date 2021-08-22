@@ -1,9 +1,6 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Amplify } from "aws-amplify";
-
-Amplify.configure({ ssr: true });
 
 export default function Home({ repositories }) {
   return (
