@@ -9,7 +9,7 @@ export default function PageSSG( { user } ) {
     )
 }
 
-export const getStaticProps: GetStaticProps = async ()=>{
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     const response = await fetch('http://api.github.com/users/cgama-dev')
     const user = await response.json()
     return {
